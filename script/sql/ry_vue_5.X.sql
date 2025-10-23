@@ -974,3 +974,53 @@ INSERT INTO test_tree VALUES (10, '000000', 7, 108, 3, '子节点66', 0, 103, sy
 INSERT INTO test_tree VALUES (11, '000000', 7, 108, 3, '子节点77', 0, 103, sysdate(), 1, NULL, NULL, 0);
 INSERT INTO test_tree VALUES (12, '000000', 10, 108, 3, '子节点88', 0, 103, sysdate(), 1, NULL, NULL, 0);
 INSERT INTO test_tree VALUES (13, '000000', 10, 108, 3, '子节点99', 0, 103, sysdate(), 1, NULL, NULL, 0);
+
+
+create table sys_app_user
+(
+    user_id     bigint                          not null comment '用户ID'
+        primary key,
+    tenant_id   varchar(20)  default '000000'   null comment '租户编号',
+    dept_id     bigint                          null comment '部门ID',
+    user_name   varchar(30)                     not null comment '用户账号',
+    nick_name   varchar(30)                     not null comment '用户昵称',
+    user_type   varchar(10)  default 'sys_user' null comment '用户类型（sys_user系统用户）',
+    email       varchar(50)  default ''         null comment '用户邮箱',
+    phonenumber varchar(11)  default ''         null comment '手机号码',
+    sex         char         default '0'        null comment '用户性别（0男 1女 2未知）',
+    avatar      bigint                          null comment '头像地址',
+    password    varchar(100) default ''         null comment '密码',
+    status      char         default '0'        null comment '帐号状态（0正常 1停用）',
+    del_flag    char         default '0'        null comment '删除标志（0代表存在 1代表删除）',
+    login_ip    varchar(128) default ''         null comment '最后登录IP',
+    login_date  datetime                        null comment '最后登录时间',
+    create_dept bigint                          null comment '创建部门',
+    create_by   bigint                          null comment '创建者',
+    create_time datetime                        null comment '创建时间',
+    update_by   bigint                          null comment '更新者',
+    update_time datetime                        null comment '更新时间',
+    remark      varchar(500)                    null comment '备注'
+)
+    comment 'app用户信息表';
+
+
+-- 菜单 SQL
+insert into sys_menu (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, perms, icon, create_dept, create_by, create_time, update_by, update_time, remark)
+values(1981187370087829506, 'app用户信息', '1', '1', 'appUser', 'system/appUser/index', 1, 0, 'C', '0', '0', 'system:appUser:list', '#', 103, 1, sysdate(), null, null, 'app用户信息菜单');
+
+-- 按钮 SQL
+insert into sys_menu (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, perms, icon, create_dept, create_by, create_time, update_by, update_time, remark)
+values(1981187370087829507, 'app用户信息查询', 1981187370087829506, '1',  '#', '', 1, 0, 'F', '0', '0', 'system:appUser:query',        '#', 103, 1, sysdate(), null, null, '');
+
+insert into sys_menu (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, perms, icon, create_dept, create_by, create_time, update_by, update_time, remark)
+values(1981187370087829508, 'app用户信息新增', 1981187370087829506, '2',  '#', '', 1, 0, 'F', '0', '0', 'system:appUser:add',          '#', 103, 1, sysdate(), null, null, '');
+
+insert into sys_menu (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, perms, icon, create_dept, create_by, create_time, update_by, update_time, remark)
+values(1981187370087829509, 'app用户信息修改', 1981187370087829506, '3',  '#', '', 1, 0, 'F', '0', '0', 'system:appUser:edit',         '#', 103, 1, sysdate(), null, null, '');
+
+insert into sys_menu (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, perms, icon, create_dept, create_by, create_time, update_by, update_time, remark)
+values(1981187370087829510, 'app用户信息删除', 1981187370087829506, '4',  '#', '', 1, 0, 'F', '0', '0', 'system:appUser:remove',       '#', 103, 1, sysdate(), null, null, '');
+
+insert into sys_menu (menu_id, menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, perms, icon, create_dept, create_by, create_time, update_by, update_time, remark)
+values(1981187370087829511, 'app用户信息导出', 1981187370087829506, '5',  '#', '', 1, 0, 'F', '0', '0', 'system:appUser:export',       '#', 103, 1, sysdate(), null, null, '');
+

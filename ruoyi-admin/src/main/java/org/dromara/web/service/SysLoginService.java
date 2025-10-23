@@ -172,6 +172,21 @@ public class SysLoginService {
     }
 
     /**
+     * 构建App登录用户
+     */
+    public LoginUser buildLoginAppUser(SysAppUserVo user) {
+        LoginUser loginUser = new LoginUser();
+        Long userId = user.getUserId();
+        loginUser.setTenantId(user.getTenantId());
+        loginUser.setUserId(userId);
+        loginUser.setDeptId(user.getDeptId());
+        loginUser.setUsername(user.getUserName());
+        loginUser.setNickname(user.getNickName());
+        loginUser.setUserType(user.getUserType());
+        return loginUser;
+    }
+
+    /**
      * 记录登录信息
      *
      * @param userId 用户ID
