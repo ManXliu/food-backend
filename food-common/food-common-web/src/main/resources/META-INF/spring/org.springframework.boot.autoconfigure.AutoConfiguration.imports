@@ -1,0 +1,5 @@
+cn.superbase.common.web.config.CaptchaConfig
+cn.superbase.common.web.config.FilterConfig
+cn.superbase.common.web.config.I18nConfig
+cn.superbase.common.web.config.ResourcesConfig
+cn.superbase.common.web.config.UndertowConfig

@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <groupId>cn.superbase</groupId>
+        <artifactId>food-modules</artifactId>
+        <version>5.5.0</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>food-demo</artifactId>
+
+    <description>
+        demo模块
+    </description>
+
+    <dependencies>
+
+        <!-- 通用工具-->
+        <dependency>
+            <groupId>cn.superbase</groupId>
+            <artifactId>food-common-core</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>cn.superbase</groupId>
+            <artifactId>food-common-doc</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>cn.superbase</groupId>
+            <artifactId>food-common-sms</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>cn.superbase</groupId>
+            <artifactId>food-common-mail</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>cn.superbase</groupId>
+            <artifactId>food-common-redis</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>cn.superbase</groupId>
+            <artifactId>food-common-idempotent</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>cn.superbase</groupId>
+            <artifactId>food-common-mybatis</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>cn.superbase</groupId>
+            <artifactId>food-common-log</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>cn.superbase</groupId>
+            <artifactId>food-common-excel</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>cn.superbase</groupId>
+            <artifactId>food-common-security</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>cn.superbase</groupId>
+            <artifactId>food-common-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>cn.superbase</groupId>
+            <artifactId>food-common-ratelimiter</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>cn.superbase</groupId>
+            <artifactId>food-common-translation</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>cn.superbase</groupId>
+            <artifactId>food-common-sensitive</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>cn.superbase</groupId>
+            <artifactId>food-common-encrypt</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>cn.superbase</groupId>
+            <artifactId>food-common-tenant</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>cn.superbase</groupId>
+            <artifactId>food-common-websocket</artifactId>
+        </dependency>
+
+    </dependencies>
+
+</project>

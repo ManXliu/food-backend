@@ -1,0 +1,6 @@
+cn.superbase.common.translation.config.TranslationConfig
+cn.superbase.common.translation.core.impl.DeptNameTranslationImpl
+cn.superbase.common.translation.core.impl.DictTypeTranslationImpl
+cn.superbase.common.translation.core.impl.OssUrlTranslationImpl
+cn.superbase.common.translation.core.impl.UserNameTranslationImpl
+cn.superbase.common.translation.core.impl.NicknameTranslationImpl

@@ -1,0 +1,3 @@
+cn.superbase.common.encrypt.config.EncryptorAutoConfiguration
+cn.superbase.common.encrypt.config.ApiDecryptAutoConfiguration
+

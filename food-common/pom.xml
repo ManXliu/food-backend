@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>food-backend</artifactId>
+        <groupId>cn.superbase</groupId>
+        <version>${revision}</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <modules>
+        <module>food-common-bom</module>
+        <module>food-common-social</module>
+        <module>food-common-core</module>
+        <module>food-common-doc</module>
+        <module>food-common-excel</module>
+        <module>food-common-idempotent</module>
+        <module>food-common-job</module>
+        <module>food-common-log</module>
+        <module>food-common-mail</module>
+        <module>food-common-mybatis</module>
+        <module>food-common-oss</module>
+        <module>food-common-ratelimiter</module>
+        <module>food-common-redis</module>
+        <module>food-common-satoken</module>
+        <module>food-common-security</module>
+        <module>food-common-sms</module>
+        <module>food-common-web</module>
+        <module>food-common-translation</module>
+        <module>food-common-sensitive</module>
+        <module>food-common-json</module>
+        <module>food-common-encrypt</module>
+        <module>food-common-tenant</module>
+        <module>food-common-websocket</module>
+        <module>food-common-sse</module>
+    </modules>
+
+    <artifactId>food-common</artifactId>
+    <packaging>pom</packaging>
+
+    <description>
+        common 通用模块
+    </description>
+
+</project>
