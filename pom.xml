@@ -1,16 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.dromara</groupId>
-    <artifactId>ruoyi-vue-plus</artifactId>
+    <groupId>cn.superbase</groupId>
+    <artifactId>food-backend</artifactId>
     <version>${revision}</version>
 
-    <name>RuoYi-Vue-Plus</name>
-    <url>https://gitee.com/dromara/RuoYi-Vue-Plus</url>
-    <description>Dromara RuoYi-Vue-Plus多租户管理系统</description>
+    <name>food-backend</name>
+    <description>food管理系统</description>
 
     <properties>
         <revision>5.5.0</revision>
@@ -67,7 +66,7 @@
                 <!-- 环境标识，需要与配置文件的名称相对应 -->
                 <profiles.active>local</profiles.active>
                 <logging.level>info</logging.level>
-                <monitor.username>ruoyi</monitor.username>
+                <monitor.username>food</monitor.username>
                 <monitor.password>123456</monitor.password>
             </properties>
         </profile>
@@ -77,7 +76,7 @@
                 <!-- 环境标识，需要与配置文件的名称相对应 -->
                 <profiles.active>dev</profiles.active>
                 <logging.level>info</logging.level>
-                <monitor.username>ruoyi</monitor.username>
+                <monitor.username>food</monitor.username>
                 <monitor.password>123456</monitor.password>
             </properties>
             <activation>
@@ -90,7 +89,7 @@
             <properties>
                 <profiles.active>prod</profiles.active>
                 <logging.level>warn</logging.level>
-                <monitor.username>ruoyi</monitor.username>
+                <monitor.username>food</monitor.username>
                 <monitor.password>123456</monitor.password>
             </properties>
         </profile>
@@ -120,8 +119,8 @@
 
             <!-- common 的依赖配置-->
             <dependency>
-                <groupId>org.dromara</groupId>
-                <artifactId>ruoyi-common-bom</artifactId>
+                <groupId>cn.superbase</groupId>
+                <artifactId>food-common-bom</artifactId>
                 <version>${revision}</version>
                 <type>pom</type>
                 <scope>import</scope>
@@ -327,33 +326,33 @@
             </dependency>
 
             <dependency>
-                <groupId>org.dromara</groupId>
-                <artifactId>ruoyi-system</artifactId>
+                <groupId>cn.superbase</groupId>
+                <artifactId>food-system</artifactId>
                 <version>${revision}</version>
             </dependency>
 
             <dependency>
-                <groupId>org.dromara</groupId>
-                <artifactId>ruoyi-job</artifactId>
+                <groupId>cn.superbase</groupId>
+                <artifactId>food-job</artifactId>
                 <version>${revision}</version>
             </dependency>
 
             <dependency>
-                <groupId>org.dromara</groupId>
-                <artifactId>ruoyi-generator</artifactId>
+                <groupId>cn.superbase</groupId>
+                <artifactId>food-generator</artifactId>
                 <version>${revision}</version>
             </dependency>
 
             <dependency>
-                <groupId>org.dromara</groupId>
-                <artifactId>ruoyi-demo</artifactId>
+                <groupId>cn.superbase</groupId>
+                <artifactId>food-demo</artifactId>
                 <version>${revision}</version>
             </dependency>
 
             <!--  工作流模块  -->
             <dependency>
-                <groupId>org.dromara</groupId>
-                <artifactId>ruoyi-workflow</artifactId>
+                <groupId>cn.superbase</groupId>
+                <artifactId>food-workflow</artifactId>
                 <version>${revision}</version>
             </dependency>
 
@@ -361,10 +360,10 @@
     </dependencyManagement>
 
     <modules>
-        <module>ruoyi-admin</module>
-        <module>ruoyi-common</module>
-        <module>ruoyi-extend</module>
-        <module>ruoyi-modules</module>
+        <module>food-admin</module>
+        <module>food-common</module>
+        <module>food-extend</module>
+        <module>food-modules</module>
     </modules>
     <packaging>pom</packaging>
 
